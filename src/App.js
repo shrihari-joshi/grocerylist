@@ -4,10 +4,11 @@ import Content from './Content';
 import Footer from './Footer';
 import AddItem from './AddItem';
 import SearchItem from './SearchItem';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   
+  const API_URL = 'http://localhost:3500/items'
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('grocerylist')));
   const [newItem, setNewItem] = useState('')
   const [search, setSearch] = useState('')
